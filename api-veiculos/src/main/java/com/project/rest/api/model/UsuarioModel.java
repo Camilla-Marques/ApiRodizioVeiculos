@@ -9,10 +9,10 @@ public class UsuarioModel {
     public String nome;
     @Column(nullable = false, length = 50, unique = true)
     public String email;
-    @Column(nullable = false, length = 11, unique = true)
+    @Column(nullable = false, length = 20, unique = true)
     @Id
-    public String cpf;
-    @Column(nullable = false, length = 10)
+    public Long cpf;
+    @Column(nullable = false, length = 30)
     public String dataNascimento;
 
     public String getNome() {
@@ -31,13 +31,11 @@ public class UsuarioModel {
         this.email = email;
     }
 
-    public String getCpf() {
+    public Long getCpf() {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
+    public void setCpf(Long cpf) { this.cpf = cpf; }
 
     public String getDataNascimento() {
         return dataNascimento;
